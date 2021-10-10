@@ -1,0 +1,570 @@
+//body, main, section, nav, ul, li, a, div, p, img, footer{
+//  margin:0;
+//  padding: 0;
+//}
+
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
+
+//font-family: 'Titillium Web', sans-serif; section_color - rgb(23, 194, 164);
+
+@mixin sectionProperties($color, $backgroundColor) {
+  padding-right: 10%;
+  padding-left: 10%;
+  padding-top: 50px;
+  text-align: center;
+  color: $color;
+  background-color: $backgroundColor;
+}
+
+@mixin headingProperties {
+  font-size: 1.8rem;
+  letter-spacing: 0.2rem;
+}
+
+@mixin borderAfterHeading {
+  content: ""; /* This is necessary for the pseudo element to work. */
+  display: block; /* This will put the pseudo element on its own line. */
+  margin: 0 auto; /* This will center the border. */
+  width: 5%; /* Change this to whatever width you want. */
+  padding-top: 10px; /* This creates some space between the element and the border. */
+  border-bottom: 3px solid rgba(152, 159, 163, 0.6); /* This creates the border. Replace black with whatever color you want. */
+}
+
+@mixin branchesProperties {
+  text-align: center;
+  padding-left: 1%;
+  padding-right: 1%;
+}
+
+@mixin buttonStyle($color, $backgroundColor) {
+  padding: 12px 50px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 3px;
+  color: $color;
+  background-color: $backgroundColor; // rgb(235, 125, 75);
+  text-transform: uppercase;
+  font-family: "Titillium Web", sans-serif;
+  width: 230px;
+}
+
+@mixin buttonHoverState($backgroundColor) {
+  cursor: pointer;
+  background-color: $backgroundColor;
+}
+
+body {
+  font-family: "Titillium Web", sans-serif;
+  margin: 0;
+  padding: 0;
+
+  main {
+    //width: 80%;
+    margin: 0 auto;
+
+    #top_section {
+      background-color: rgb(135, 80, 156);
+      padding-top: 50px;
+      nav {
+        padding-right: 12%;
+        padding-left: 12%;
+
+        ul {
+          list-style: none;
+          //border: 2px solid rgb(212, 179, 67);
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+
+          li {
+            margin-left: 10px;
+            margin-right: 10px;
+
+            &:first-of-type {
+              margin-left: 0;
+              margin-right: 0;
+            }
+            &.home {
+              margin-left: auto;
+            }
+
+            a {
+              text-decoration: none;
+              color: #ffffff;
+              padding: 3px 10px;
+              text-transform: uppercase;
+
+              &:hover {
+                background-color: rgb(100, 58, 121);
+                border-radius: 3px;
+              }
+            }
+          }
+        }
+      }
+
+      div.main_ads {
+        padding-right: 10%;
+        padding-left: 10%;
+        text-align: center;
+        padding-top: 50px;
+        padding-bottom: 120px;
+
+        h1 {
+          color: #ffffff;
+          font-size: 2.5rem;
+          line-height: 1.2;
+        }
+
+        button {
+          @include buttonStyle(rgb(255, 255, 255), rgb(235, 125, 75));
+
+          &:hover {
+            @include buttonHoverState(rgb(204, 96, 45));
+          }
+        }
+      }
+    }
+
+    // Next Section - start to coding service section
+
+    #service {
+      @include sectionProperties(#ffffff, rgb(23, 194, 164));
+
+      h3 {
+        @include headingProperties();
+
+        &::after {
+          @include borderAfterHeading();
+        }
+      }
+
+      p {
+        font-size: inherit;
+        margin-bottom: 70px;
+      }
+
+      .articles_description {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+        .branches {
+          @include branchesProperties();
+
+          img {
+            margin-bottom: 10px;
+          }
+
+          h5 {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+          }
+
+          p {
+            font-size: inherit;
+          }
+
+          p.name {
+            font-weight: bold;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+
+    //Here start the team section
+
+    #team_section {
+      @include sectionProperties(rgb(60, 71, 97), rgb(231, 241, 248));
+
+      h3 {
+        @include headingProperties();
+
+        &::after {
+          @include borderAfterHeading();
+        }
+      }
+
+      #articles_description {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-top: 50px;
+
+
+        .branches {
+          @include branchesProperties();
+          text-align: center;
+
+          .team_member_image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+          }
+
+          .professional_title {
+            color: rgb(108, 191, 220);
+          }
+
+          .social_media {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+
+            .social_media_li {
+              margin-left: 10px;
+              margin-right: 10px;
+              width: 50px;
+              height: 50px;
+
+              a {
+                padding: 10px;
+                background-color: rgb(189, 209, 223);
+                border-radius: 50%;
+
+                &:hover {
+                  background-color: rgb(133, 149, 160);
+                }
+
+                img {
+                  text-align: center;
+                  vertical-align: middle;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    //Here start the technology section
+
+    #technological_skills {
+      @include sectionProperties(rgb(60, 71, 97), rgb(255, 255, 255));
+      padding-bottom: 70px;
+
+      h3 {
+        @include headingProperties();
+
+        &::after {
+          @include borderAfterHeading();
+        }
+      }
+
+      .group_skills {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-top: 50px;
+
+        .branches {
+          @include branchesProperties();
+
+          .technology_name {
+            font-size: 1.5rem;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+
+    //Here start the portfolio section
+
+    #portfolio {
+      @include sectionProperties(rgb(57, 57, 57), rgb(255, 221, 153));
+
+      padding-bottom: 70px;
+
+      h3 {
+        @include headingProperties();
+
+        &::after {
+          @include borderAfterHeading();
+        }
+      }
+
+      #type_of_app {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+        margin-bottom: 70px;
+
+        li {
+          margin-left: 10px;
+          margin-right: 10px;
+
+          a {
+            text-decoration: none;
+            color: rgb(57, 57, 57);
+            background-color: rgb(235, 201, 133);
+            padding: 5px 20px;
+            border-radius: 3px;
+            font-weight: 500;
+
+            &:hover {
+              background-color: rgb(255, 255, 255);
+            }
+          }
+        }
+      }
+
+      .portfolio_group_products {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .portfolio_view {
+          margin-left: 20px;
+          margin-right: 20px;
+          margin-bottom: 40px;
+        }
+      }
+
+      #portfolio_button button {
+        @include buttonStyle(rgb(255, 255, 255), rgb(23, 194, 164));
+
+        &:hover {
+          @include buttonHoverState(rgb(36, 151, 130));
+          
+          //background-color: rgb(36, 151, 130);
+          //cursor: pointer;
+          //@include buttonHoverState(rgb(28, 121, 104));
+        }
+      }
+    }
+
+    // Here start the opinion section
+
+    #opinions {
+      @include sectionProperties(rgb(255, 255, 255), rgb(215, 70, 128));
+
+      padding-bottom: 70px;
+
+      h3 {
+        @include headingProperties();
+
+        &::after {
+          @include borderAfterHeading();
+        }
+      }
+
+      .comment_area {
+        display: flex;
+        justify-content: space-around;
+        padding-top: 40px;
+
+        .client_comment {
+          padding-left: 1%;
+          padding-right: 1%;
+          width: 40%;
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-start;
+
+          > img {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            margin-right: 30px;
+            float: left;
+          }
+
+          .real_comment {
+            text-align: start;
+
+            .quote {
+              font-style: italic;
+            }
+            .client_name {
+              font-weight: bold;
+              text-transform: uppercase;
+              margin-bottom: -5px;
+            }
+            .client_job_title {
+              margin-top: 5px;
+              color: rgb(250, 200, 150);
+            }
+          }
+        }
+      }
+    }
+
+    //Here stat my message area
+
+    #message_area {
+      @include sectionProperties(rgb(255, 255, 255), rgb(60, 84, 153));
+
+      padding-bottom: 70px;
+
+      h3 {
+        @include headingProperties();
+
+        &::after {
+          @include borderAfterHeading();
+        }
+      }
+
+      form {
+        font-size: inherit;
+        margin-top: 70px;
+
+        .input_fields {
+          display: flex;
+          justify-content: center;
+          margin-bottom: 30px;
+
+          input {
+            width: 30%;
+            margin-left: 40px;
+            background-color: rgb(39, 58, 113);
+            border: none;
+            border-radius: 3px;
+            padding: 10px;
+
+            &:first-of-type {
+              margin-left: none;
+            }
+
+            &::placeholder {
+              color: rgb(255, 255, 255);
+            }
+          }
+        }
+
+        .text_field {
+          display: flex;
+          justify-content: center;
+          padding-left: 40px;
+          margin-bottom: 40px;
+
+          textarea {
+            width: 67%;
+            height: 160px;
+            background-color: rgb(39, 58, 113);
+            border: none;
+            border-radius: 3px;
+          }
+        }
+
+        #button_form {
+          @include buttonStyle(rgb(255, 255, 255), rgb(48, 186, 231));
+          width: 230px;
+          display: inline-block;
+
+          &:hover {
+            @include buttonHoverState(rgb(37, 141, 175));
+          }
+        }
+      }
+    }
+
+    //Here start my footer
+
+    footer {
+      background-color: rgb(52, 75, 142);
+      margin: 0;
+      padding: 3% 18%;
+
+      #footer_menu {
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+        margin: 0;
+
+        li {
+          font-size: inherit;
+
+          a {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            font-size: 1.2rem;
+            font-weight: 600;
+            padding-right: 10px;
+
+            &:hover {
+              color: rgb(48, 186, 231);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//Here start my media query
+//Here start my media query
+//Here start my media query
+//Here start my media query
+//Here start my media query
+
+@media screen and (max-width: 850px) {
+  main #top_section {
+    padding-top: inherit;
+
+    nav ul {
+      flex-direction: column;
+      margin: 0;
+
+      li {
+        padding: 5px;
+
+        a {
+          padding: 10px;
+          font-size: 1.5rem;
+          font-weight: bold;
+        }
+      }
+
+      li.home {
+        margin-left: 10px !important;
+      }
+    }
+  }
+
+
+}
+
+
+@media screen and (max-width: 850px) {
+
+  body {
+
+    .comment_area {
+  
+      .client_comment {
+        display: block !important;
+      }
+  
+    }
+
+    footer {
+      #footer_menu{
+       
+        li {
+          font-size: inherit;
+          margin: 5px;
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 570px) {
+
+  #portfolio {
+    .portfolio_view>img{
+      height: 150px;
+      width: auto;
+    }
+  }
+
+
+}
+
+
+

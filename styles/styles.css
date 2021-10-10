@@ -1,0 +1,661 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
+body {
+  font-family: "Titillium Web", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body main {
+  margin: 0 auto;
+}
+
+body main #top_section {
+  background-color: #87509c;
+  padding-top: 50px;
+}
+
+body main #top_section nav {
+  padding-right: 12%;
+  padding-left: 12%;
+}
+
+body main #top_section nav ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body main #top_section nav ul li {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+body main #top_section nav ul li:first-of-type {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+body main #top_section nav ul li.home {
+  margin-left: auto;
+}
+
+body main #top_section nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  padding: 3px 10px;
+  text-transform: uppercase;
+}
+
+body main #top_section nav ul li a:hover {
+  background-color: #643a79;
+  border-radius: 3px;
+}
+
+body main #top_section div.main_ads {
+  padding-right: 10%;
+  padding-left: 10%;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 120px;
+}
+
+body main #top_section div.main_ads h1 {
+  color: #ffffff;
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+body main #top_section div.main_ads button {
+  padding: 12px 50px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  background-color: #eb7d4b;
+  text-transform: uppercase;
+  font-family: "Titillium Web", sans-serif;
+  width: 230px;
+}
+
+body main #top_section div.main_ads button:hover {
+  cursor: pointer;
+  background-color: #cc602d;
+}
+
+body main #service {
+  padding-right: 10%;
+  padding-left: 10%;
+  padding-top: 50px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #17c2a4;
+}
+
+body main #service h3 {
+  font-size: 1.8rem;
+  letter-spacing: 0.2rem;
+}
+
+body main #service h3::after {
+  content: "";
+  /* This is necessary for the pseudo element to work. */
+  display: block;
+  /* This will put the pseudo element on its own line. */
+  margin: 0 auto;
+  /* This will center the border. */
+  width: 5%;
+  /* Change this to whatever width you want. */
+  padding-top: 10px;
+  /* This creates some space between the element and the border. */
+  border-bottom: 3px solid rgba(152, 159, 163, 0.6);
+  /* This creates the border. Replace black with whatever color you want. */
+}
+
+body main #service p {
+  font-size: inherit;
+  margin-bottom: 70px;
+}
+
+body main #service .articles_description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body main #service .articles_description .branches {
+  text-align: center;
+  padding-left: 1%;
+  padding-right: 1%;
+}
+
+body main #service .articles_description .branches img {
+  margin-bottom: 10px;
+}
+
+body main #service .articles_description .branches h5 {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+body main #service .articles_description .branches p {
+  font-size: inherit;
+}
+
+body main #service .articles_description .branches p.name {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+body main #team_section {
+  padding-right: 10%;
+  padding-left: 10%;
+  padding-top: 50px;
+  text-align: center;
+  color: #3c4761;
+  background-color: #e7f1f8;
+}
+
+body main #team_section h3 {
+  font-size: 1.8rem;
+  letter-spacing: 0.2rem;
+}
+
+body main #team_section h3::after {
+  content: "";
+  /* This is necessary for the pseudo element to work. */
+  display: block;
+  /* This will put the pseudo element on its own line. */
+  margin: 0 auto;
+  /* This will center the border. */
+  width: 5%;
+  /* Change this to whatever width you want. */
+  padding-top: 10px;
+  /* This creates some space between the element and the border. */
+  border-bottom: 3px solid rgba(152, 159, 163, 0.6);
+  /* This creates the border. Replace black with whatever color you want. */
+}
+
+body main #team_section #articles_description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 50px;
+}
+
+body main #team_section #articles_description .branches {
+  text-align: center;
+  padding-left: 1%;
+  padding-right: 1%;
+  text-align: center;
+}
+
+body main #team_section #articles_description .branches .team_member_image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+body main #team_section #articles_description .branches .professional_title {
+  color: #6cbfdc;
+}
+
+body main #team_section #articles_description .branches .social_media {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main #team_section #articles_description .branches .social_media .social_media_li {
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 50px;
+  height: 50px;
+}
+
+body main #team_section #articles_description .branches .social_media .social_media_li a {
+  padding: 10px;
+  background-color: #bdd1df;
+  border-radius: 50%;
+}
+
+body main #team_section #articles_description .branches .social_media .social_media_li a:hover {
+  background-color: #8595a0;
+}
+
+body main #team_section #articles_description .branches .social_media .social_media_li a img {
+  text-align: center;
+  vertical-align: middle;
+}
+
+body main #technological_skills {
+  padding-right: 10%;
+  padding-left: 10%;
+  padding-top: 50px;
+  text-align: center;
+  color: #3c4761;
+  background-color: white;
+  padding-bottom: 70px;
+}
+
+body main #technological_skills h3 {
+  font-size: 1.8rem;
+  letter-spacing: 0.2rem;
+}
+
+body main #technological_skills h3::after {
+  content: "";
+  /* This is necessary for the pseudo element to work. */
+  display: block;
+  /* This will put the pseudo element on its own line. */
+  margin: 0 auto;
+  /* This will center the border. */
+  width: 5%;
+  /* Change this to whatever width you want. */
+  padding-top: 10px;
+  /* This creates some space between the element and the border. */
+  border-bottom: 3px solid rgba(152, 159, 163, 0.6);
+  /* This creates the border. Replace black with whatever color you want. */
+}
+
+body main #technological_skills .group_skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 50px;
+}
+
+body main #technological_skills .group_skills .branches {
+  text-align: center;
+  padding-left: 1%;
+  padding-right: 1%;
+}
+
+body main #technological_skills .group_skills .branches .technology_name {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+body main #portfolio {
+  padding-right: 10%;
+  padding-left: 10%;
+  padding-top: 50px;
+  text-align: center;
+  color: #393939;
+  background-color: #ffdd99;
+  padding-bottom: 70px;
+}
+
+body main #portfolio h3 {
+  font-size: 1.8rem;
+  letter-spacing: 0.2rem;
+}
+
+body main #portfolio h3::after {
+  content: "";
+  /* This is necessary for the pseudo element to work. */
+  display: block;
+  /* This will put the pseudo element on its own line. */
+  margin: 0 auto;
+  /* This will center the border. */
+  width: 5%;
+  /* Change this to whatever width you want. */
+  padding-top: 10px;
+  /* This creates some space between the element and the border. */
+  border-bottom: 3px solid rgba(152, 159, 163, 0.6);
+  /* This creates the border. Replace black with whatever color you want. */
+}
+
+body main #portfolio #type_of_app {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 70px;
+}
+
+body main #portfolio #type_of_app li {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+body main #portfolio #type_of_app li a {
+  text-decoration: none;
+  color: #393939;
+  background-color: #ebc985;
+  padding: 5px 20px;
+  border-radius: 3px;
+  font-weight: 500;
+}
+
+body main #portfolio #type_of_app li a:hover {
+  background-color: white;
+}
+
+body main #portfolio .portfolio_group_products {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body main #portfolio .portfolio_group_products .portfolio_view {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 40px;
+}
+
+body main #portfolio #portfolio_button button {
+  padding: 12px 50px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  background-color: #17c2a4;
+  text-transform: uppercase;
+  font-family: "Titillium Web", sans-serif;
+  width: 230px;
+}
+
+body main #portfolio #portfolio_button button:hover {
+  cursor: pointer;
+  background-color: #249782;
+}
+
+body main #opinions {
+  padding-right: 10%;
+  padding-left: 10%;
+  padding-top: 50px;
+  text-align: center;
+  color: white;
+  background-color: #d74680;
+  padding-bottom: 70px;
+}
+
+body main #opinions h3 {
+  font-size: 1.8rem;
+  letter-spacing: 0.2rem;
+}
+
+body main #opinions h3::after {
+  content: "";
+  /* This is necessary for the pseudo element to work. */
+  display: block;
+  /* This will put the pseudo element on its own line. */
+  margin: 0 auto;
+  /* This will center the border. */
+  width: 5%;
+  /* Change this to whatever width you want. */
+  padding-top: 10px;
+  /* This creates some space between the element and the border. */
+  border-bottom: 3px solid rgba(152, 159, 163, 0.6);
+  /* This creates the border. Replace black with whatever color you want. */
+}
+
+body main #opinions .comment_area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-top: 40px;
+}
+
+body main #opinions .comment_area .client_comment {
+  padding-left: 1%;
+  padding-right: 1%;
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+body main #opinions .comment_area .client_comment > img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin-right: 30px;
+  float: left;
+}
+
+body main #opinions .comment_area .client_comment .real_comment {
+  text-align: start;
+}
+
+body main #opinions .comment_area .client_comment .real_comment .quote {
+  font-style: italic;
+}
+
+body main #opinions .comment_area .client_comment .real_comment .client_name {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: -5px;
+}
+
+body main #opinions .comment_area .client_comment .real_comment .client_job_title {
+  margin-top: 5px;
+  color: #fac896;
+}
+
+body main #message_area {
+  padding-right: 10%;
+  padding-left: 10%;
+  padding-top: 50px;
+  text-align: center;
+  color: white;
+  background-color: #3c5499;
+  padding-bottom: 70px;
+}
+
+body main #message_area h3 {
+  font-size: 1.8rem;
+  letter-spacing: 0.2rem;
+}
+
+body main #message_area h3::after {
+  content: "";
+  /* This is necessary for the pseudo element to work. */
+  display: block;
+  /* This will put the pseudo element on its own line. */
+  margin: 0 auto;
+  /* This will center the border. */
+  width: 5%;
+  /* Change this to whatever width you want. */
+  padding-top: 10px;
+  /* This creates some space between the element and the border. */
+  border-bottom: 3px solid rgba(152, 159, 163, 0.6);
+  /* This creates the border. Replace black with whatever color you want. */
+}
+
+body main #message_area form {
+  font-size: inherit;
+  margin-top: 70px;
+}
+
+body main #message_area form .input_fields {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 30px;
+}
+
+body main #message_area form .input_fields input {
+  width: 30%;
+  margin-left: 40px;
+  background-color: #273a71;
+  border: none;
+  border-radius: 3px;
+  padding: 10px;
+}
+
+body main #message_area form .input_fields input:first-of-type {
+  margin-left: none;
+}
+
+body main #message_area form .input_fields input::-webkit-input-placeholder {
+  color: white;
+}
+
+body main #message_area form .input_fields input:-ms-input-placeholder {
+  color: white;
+}
+
+body main #message_area form .input_fields input::-ms-input-placeholder {
+  color: white;
+}
+
+body main #message_area form .input_fields input::placeholder {
+  color: white;
+}
+
+body main #message_area form .text_field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-left: 40px;
+  margin-bottom: 40px;
+}
+
+body main #message_area form .text_field textarea {
+  width: 67%;
+  height: 160px;
+  background-color: #273a71;
+  border: none;
+  border-radius: 3px;
+}
+
+body main #message_area form #button_form {
+  padding: 12px 50px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  background-color: #30bae7;
+  text-transform: uppercase;
+  font-family: "Titillium Web", sans-serif;
+  width: 230px;
+  width: 230px;
+  display: inline-block;
+}
+
+body main #message_area form #button_form:hover {
+  cursor: pointer;
+  background-color: #258daf;
+}
+
+body main footer {
+  background-color: #344b8e;
+  margin: 0;
+  padding: 3% 18%;
+}
+
+body main footer #footer_menu {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0;
+}
+
+body main footer #footer_menu li {
+  font-size: inherit;
+}
+
+body main footer #footer_menu li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding-right: 10px;
+}
+
+body main footer #footer_menu li a:hover {
+  color: #30bae7;
+}
+
+@media screen and (max-width: 850px) {
+  main #top_section {
+    padding-top: inherit;
+  }
+  main #top_section nav ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0;
+  }
+  main #top_section nav ul li {
+    padding: 5px;
+  }
+  main #top_section nav ul li a {
+    padding: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  main #top_section nav ul li.home {
+    margin-left: 10px !important;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  body .comment_area .client_comment {
+    display: block !important;
+  }
+  body footer #footer_menu li {
+    font-size: inherit;
+    margin: 5px;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  #portfolio .portfolio_view > img {
+    height: 150px;
+    width: auto;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
